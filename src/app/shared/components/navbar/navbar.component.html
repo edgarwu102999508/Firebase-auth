@@ -1,0 +1,36 @@
+<nav class="navbar" *ngIf="authService.user$ | async as user">
+  <a [routerLink]="['/']" class="navbar-brand">
+    <img
+      class="navbar-brand-logo"
+      src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png"
+      alt="brand-logo"
+    />
+    Auth
+  </a>
+
+  <ul class="navbar-nav">
+    <li class="navbar-nav-item">
+      <a [routerLink]="['/']" routerLinkActive="active" class="navbar-nav-link"
+        >Dashboard</a
+      >
+    </li>
+    <li class="navbar-nav-item">
+      <a
+        [routerLink]="['posts-page']"
+        routerLinkActive="active"
+        class="navbar-nav-link"
+        >Post</a
+      >
+    </li>
+  </ul>
+  <div class="navbar-user">
+    <button class="dropdown-btn" (click)="toggler()">
+      <i class="fas fa-user-alt"></i>
+      {{ user.displayName }}
+      <i class="fas fa-caret-down"></i>
+    </button>
+    <li class="dropdown-content" *ngIf="onToggle == true">
+      <a (click)="onLogout()">Log out</a>
+    </li>
+  </div>
+</nav>

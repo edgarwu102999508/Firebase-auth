@@ -1,0 +1,16 @@
+@import "../app.component.scss";
+
+.header {
+  height: 200px;
+  background-color: $primary;
+  margin-top: 60px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-weight: 300;
+  }
+}

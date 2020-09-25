@@ -1,0 +1,139 @@
+@import "../../app.component.scss";
+
+.form-title {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  &-username,
+  &-email,
+  &-password {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    input {
+      border: 1px solid rgb(197, 197, 197);
+      border-radius: 20px;
+      padding: 10px 20px;
+      outline: none;
+      &[type="email"]:focus,
+      &[type="password"]:focus {
+        transition: all 0.2s;
+        box-shadow: 0 0 5px $primary-light;
+        border: 1px solid $grey-dark;
+      }
+    }
+  }
+  &-btn {
+    outline: none;
+    border: 1px solid $primary-light;
+    border-radius: 20px;
+    background-color: $primary-light;
+    color: $grey-light;
+    padding: 8px;
+    margin: 50px auto 20px auto;
+    width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover {
+      border: 1px solid $primary;
+      background-color: #fff;
+      color: $primary;
+    }
+  }
+  &-btn-2 {
+    outline: none;
+    border: 1px solid $primary-light;
+    border-radius: 20px;
+    background-color: #fff;
+    color: $primary-light;
+    padding: 8px;
+    margin-top: 10px;
+    width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover {
+      border: 1px solid $primary-light;
+      background-color: $primary-light;
+      color: #fff;
+    }
+  }
+}
+.auth-nav {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+
+  &-btn {
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0 20px;
+    font-size: 1rem;
+    color: $primary-dark;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      color: $grey;
+    }
+  }
+}
+
+.condition {
+  color: red;
+  margin-left: 4px;
+}
+
+.disabled {
+  border: 1px solid $grey;
+  background-color: $grey;
+  cursor: not-allowed;
+  &:hover {
+    border: 1px solid $grey;
+    background-color: $grey;
+    color: $grey-light;
+  }
+}
+
+.error-message {
+  text-align: center;
+  color: $danger;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 117, 117, 0.1);
+}
+.success-message {
+  text-align: center;
+  color: $success;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgba(117, 255, 140, 0.1);
+}
+
+.failed-text {
+  color: $danger;
+}
+
+.alert-message {
+  color: $danger;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid $danger;
+}

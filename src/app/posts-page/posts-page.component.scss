@@ -1,0 +1,114 @@
+@import "../app.component.scss";
+
+.search {
+  height: 96px;
+  margin-top: 60px;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 2;
+
+  &-bar {
+    display: inline;
+    color: $grey-light;
+    font-size: 1rem;
+    min-width: 60%;
+    padding: 0.7rem 1rem;
+    margin: 0 -40px;
+    background: $primary-light;
+    border-radius: 12px;
+    border: 1px solid $primary-dark;
+    transition: all 0.2s;
+    &:focus {
+      outline: none;
+      min-width: 65%;
+    }
+  }
+  &-btn {
+    outline: none;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $primary-dark;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.posts {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &-item {
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    border-left: 5px solid $primary-light;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    min-height: 120px;
+    min-width: 70%;
+    box-shadow: 0px 4px 10px rgb(218, 218, 218);
+    /* cursor: pointer; */
+    transition: all 0.1s;
+
+    &:hover {
+      border-left: 10px solid $warning;
+    }
+  }
+
+  &-title {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+  &-body {
+    padding-bottom: 12px;
+  }
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  font-size: 30px;
+  color: $primary;
+  background-color: #24fdaa;
+  border-radius: 50%;
+  border: none;
+  padding: 12px 18px;
+  box-shadow: 0px 5px 18px #469c67;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-4px);
+    filter: brightness(90%);
+  }
+}
+
+.del-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  color: #999;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    color: $danger;
+  }
+}

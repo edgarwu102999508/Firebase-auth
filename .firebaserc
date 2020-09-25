@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-http-1007": {
+      "hosting": {
+        "firebase-auth": [
+          "ng-http-1007"
+        ]
+      }
+    }
+  }
+}

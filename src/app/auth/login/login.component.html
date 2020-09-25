@@ -1,0 +1,48 @@
+<div class="container">
+  <h2 class="form-title" [ngClass]="{ 'failed-text': error }">
+    {{ !error ? "Login" : "Login failed." }}
+  </h2>
+  <div class="error-message" *ngIf="error">
+    {{ errorMessage }}
+  </div>
+  <form
+    class="form"
+    (ngSubmit)="onLogin(loginForm.value)"
+    [formGroup]="loginForm"
+  >
+    <div class="form-email">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" />
+      <small class="alert-message" *ngIf="email.invalid && email.touched">
+        <div *ngIf="email.errors.email">Invalid email type.</div>
+        <div *ngIf="email.errors.required">Email is required.</div>
+      </small>
+    </div>
+
+    <div class="form-password">
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" />
+      <small class="alert-message" *ngIf="password.invalid && password.touched">
+        <div *ngIf="password.errors.required">Password is required.</div>
+        <div *ngIf="password.errors.minlength">
+          Password is required minimum
+          {{ password.errors.minlength.requiredLength }} characters.
+        </div>
+      </small>
+    </div>
+    <button
+      [disabled]="loginForm.invalid"
+      [ngClass]="{ disabled: loginForm.invalid }"
+      class="form-btn"
+    >
+      Login
+    </button>
+  </form>
+  <div class="auth-nav">
+    <button class="auth-nav-btn" [routerLink]="['/register']">Sign up</button>
+    <span> | </span>
+    <button class="auth-nav-btn" [routerLink]="['/reset-password']">
+      Forgot password
+    </button>
+  </div>
+</div>
