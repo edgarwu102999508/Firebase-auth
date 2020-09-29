@@ -25,21 +25,21 @@
     width: 400px;
     input {
       border: 1px solid rgb(197, 197, 197);
-      border-radius: 20px;
+      border-radius: 6px;
       padding: 10px 20px;
       outline: none;
       &[type="email"]:focus,
       &[type="password"]:focus {
         transition: all 0.2s;
-        box-shadow: 0 0 5px $primary-light;
-        border: 1px solid $grey-dark;
+        box-shadow: 0 0 5px #1170be;
+        border: 1px solid #1170be6e;
       }
     }
   }
   &-btn {
     outline: none;
     border: 1px solid $primary-light;
-    border-radius: 20px;
+    border-radius: 6px;
     background-color: $primary-light;
     color: $grey-light;
     padding: 8px;
@@ -57,7 +57,7 @@
   &-btn-2 {
     outline: none;
     border: 1px solid $primary-light;
-    border-radius: 20px;
+    border-radius: 6px;
     background-color: #fff;
     color: $primary-light;
     padding: 8px;
@@ -112,14 +112,14 @@
 .error-message {
   text-align: center;
   color: $danger;
-  border-radius: 20px;
+  border-radius: 6px;
   padding: 10px 20px;
   background-color: rgba(255, 117, 117, 0.1);
 }
 .success-message {
   text-align: center;
   color: $success;
-  border-radius: 20px;
+  border-radius: 6px;
   padding: 10px 20px;
   background-color: rgba(117, 255, 140, 0.1);
 }

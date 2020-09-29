@@ -1,0 +1,15 @@
+<li class="post-item">
+  <h3 class="post-item-title">
+    <!-- <span>{{post.id}}</span> -->
+    {{ post.title }}
+  </h3>
+  <p class="post-item-body">
+    {{ post.body }}
+  </p>
+  <button class="edit-btn" (click)="onEdit()">
+    <i class="far fa-edit"></i>
+  </button>
+  <button class="del-btn" (click)="onDelete(post)">
+    <i class="far fa-trash-alt"></i>
+  </button>
+</li>

@@ -1,0 +1,53 @@
+@import "../posts-page.component.scss";
+@import "../../app.component.scss";
+
+.post-item {
+  position: relative;
+  list-style: none;
+  background-color: #fff;
+  border-left: 6px solid $primary-light;
+  border-radius: 6px;
+  padding: 20px 40px;
+  margin: 20px 0;
+  min-height: 120px;
+  min-width: 70%;
+  box-shadow: 0px 4px 10px rgb(218, 218, 218);
+  /* cursor: pointer; */
+  transition: all 0.1s;
+
+  &:hover {
+    border-left: 10px solid $warning;
+  }
+  &-title {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+  &-body {
+    padding-bottom: 12px;
+  }
+
+  .del-btn,
+  .edit-btn {
+    position: absolute;
+    font-size: 20px;
+    color: #999;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      color: $danger;
+    }
+  }
+
+  .del-btn {
+    top: 12px;
+    right: 16px;
+  }
+  .edit-btn {
+    top: 12px;
+    right: 48px;
+  }
+}

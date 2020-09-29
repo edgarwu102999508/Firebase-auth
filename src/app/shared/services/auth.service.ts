@@ -43,8 +43,16 @@ export class AuthService {
   }
 
   logout() {
-    this.auth.signOut().then(() => {
-      this.router.navigate(["login"]);
+    return new Promise((resovle, reject) => {
+      this.auth.signOut().then(
+        () => {
+          this.router.navigate(["login"]);
+          resovle();
+        },
+        (err) => {
+          reject(err);
+        }
+      );
     });
   }
 
